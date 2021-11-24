@@ -1,0 +1,26 @@
+[Unit]
+Description=sbercoin's distributed currency daemon
+After=network.target
+
+[Service]
+User=sbercoin
+Group=sbercoin
+
+Type=sbercoin
+PIDFile=/var/lib/sbercoind/sbercoind.pid
+
+ExecStart=/usr/bin/sbercoind -daemon -pid=/var/lib/sbercoind/sbercoind.pid \
+          -conf=/etc/sbercoin/sbercoin.conf -datadir=/var/lib/sbercoind
+
+ExecStop=-/usr/bin/sbercoin-cli -conf=/etc/sbercoin/sbercoin.conf \
+         -datadir=/var/lib/sbercoind stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,26 @@
+# /etc/conf.d/sbercoind: config file for /etc/init.d/sbercoind
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/sbercoin/sbercoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/sbercoind"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/sbercoind.pid"
+
+# Where to write sbercoind data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/sbercoind"
+
+# User and group to own sbercoind process
+#BITCOIND_USER="sbercoin"
+#BITCOIND_GROUP="sbercoin"
+
+# Path to sbercoind executable
+#BITCOIND_BIN="/usr/bin/sbercoind"
+
+# Nice value to run sbercoind under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

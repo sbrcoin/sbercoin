@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=sbercoin
+Comment=sbercoin P2P Cryptocurrency
+Comment[fr]=sbercoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=sbercoin, eşten eşe kriptografik sanal para birimi
+Exec=sbercoin-qt %u
+Terminal=false
+Type=Application
+Icon=sbercoin128
+MimeType=x-scheme-handler/sbercoin;
+Categories=Office;Finance;
